@@ -1,0 +1,233 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 70vw;
+  height: 90vh;
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.1s ease;
+  background-color: white;
+  border: 3px solid #ccc;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  flex-direction: row;
+}
+
+.wallpaper {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+
+.wallpaper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner {
+  position: absolute;
+  top: 6em;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  color: white;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+}
+
+.banner .logo {
+  height: 100px;
+  object-fit: contain;
+}
+
+.banner-title {
+  font-size: 3em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.form-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background-color: #f9f9f9;
+}
+
+.form {
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quoteHeader {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.quoteHeader h2 {
+  margin-bottom: 10px;
+}
+
+.quoteHeader p {
+  margin-bottom: 30px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+button {
+  padding: 10px 15px;
+  width: 100%;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  max-width: 350px;
+}
+
+button:hover {
+  background-color: #0069d9;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.row .input-group {
+  flex: 1;
+  min-width: 150px;
+}
+
+/* UFO SVG container */
+.ufo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.ufo-svg {
+  width: 200px;
+  height: auto;
+}
+
+.stickman {
+  transition: fill 0.5s ease, transform 2s ease;
+}
+
+button:hover ~ .ufo-container .stickman {
+  transform: translateY(-60px);
+}
+
+button:hover ~ .ufo-container .beam {
+  fill: rgba(255, 255, 200, 0.6);
+}
+
+.already-member {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.already-member a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.already-member a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    width: 90vw;
+    height: auto;
+  }
+
+  .wallpaper {
+    height: 250px;
+  }
+
+  .banner {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 20px;
+    font-size: 0.9em;
+    width: 90%;
+  }
+
+  .banner-title {
+    font-size: 2em;
+  }
+
+  .form-wrapper {
+    padding: 20px;
+  }
+
+  .form {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .input-group {
+    max-width: 100%;
+  }
+
+  button {
+    max-width: 100%;
+  }
+}

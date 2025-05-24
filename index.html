@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign-Up Form</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="card" id="card">
+    <div class="wallpaper">
+    <div class="banner">
+        <img src="alien.png" alt="Logo" class="logo">
+        <h1 class="banner-title">Planet EARTH</h1>
+    </div>
+    <img src="background.jpg" alt="Background Image">
+    </div>
+
+    <div class="form-wrapper">
+<form class="form">
+  <div class="quoteHeader">
+    <h2>Join Us Today!</h2>
+    <p>Sign up to start your journey with us.</p>
+  </div>
+
+  <!-- Name & Surname -->
+  <div class="row">
+    <div class="input-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="input-group">
+      <label for="surname">Surname</label>
+      <input type="text" id="surname" name="surname" required>
+    </div>
+  </div>
+
+  <!-- Email & Phone -->
+  <div class="row">
+    <div class="input-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="input-group">
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" type="number" pattern="\d*" required>
+    </div>
+  </div>
+
+  <!-- Password & Confirm Password -->
+  <div class="row">
+    <div class="input-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <div class="input-group">
+      <label for="confirmPassword">Confirm Password</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" required>
+    </div>
+  </div>
+
+  <button type="submit">Sign Up</button>
+  
+<p class="already-member">
+  Already a member?
+  <a href="#">Sign in</a>
+</p>
+
+
+  <div class="ufo-container">
+  
+
+  <svg viewBox="0 0 200 200" class="ufo-svg">
+    <!-- UFO -->
+    <ellipse cx="100" cy="40" rx="60" ry="20" fill="#888" />
+    <ellipse cx="100" cy="45" rx="80" ry="10" fill="#bbb" opacity="0.6" />
+    
+    <!-- Light beam -->
+    <polygon class="beam" points="70,60 130,60 110,180 90,180" fill="rgba(255,255,100,0.3)" />
+
+    <!-- Cow -->
+    <g class="stickman" transform="translate(0, 0)">
+    <!-- Head -->
+    <circle cx="100" cy="160" r="6" fill="black" />
+
+    <!-- Body -->
+    <line x1="100" y1="166" x2="100" y2="180" stroke="black" stroke-width="2" />
+
+    <!-- Arms (spread) -->
+    <line x1="100" y1="170" x2="110" y2="175" stroke="black" stroke-width="2" />
+    <line x1="100" y1="170" x2="90" y2="175" stroke="black" stroke-width="2" />
+
+    <!-- Legs (falling) -->
+    <line x1="100" y1="180" x2="108" y2="190" stroke="black" stroke-width="2" />
+    <line x1="100" y1="180" x2="92" y2="190" stroke="black" stroke-width="2" />
+    </g>
+
+  </svg>
+</div>
+
+</form>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
